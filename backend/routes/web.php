@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     logger('welcome route.');
+//     return view('welcome');
+// });
+
+// Route::get('hello',function(){
+//     echo 'Hello World';
+// });
+
+Route::get('hello', 'PostsController@hello');
+
+Route::get('/', 'PostsController@index');
