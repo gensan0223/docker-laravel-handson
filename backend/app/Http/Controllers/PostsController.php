@@ -17,4 +17,19 @@ class PostsController extends Controller
         $list = \DB::table('posts')->get();
         return view('posts.index', ['list'=>$list]);
     }
+    
+    public function createForm()
+    {
+        return view('posts.createForm');
+    }
+
+    public function create(Request $request)
+    {
+        $post = $request->input('newPost');
+        \DB::table('posts')->insert([
+            'post' => $post
+        ]);
+
+        return redirect('/');
+    }
 }

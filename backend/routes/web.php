@@ -25,3 +25,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('hello', 'PostsController@hello');
 
 Route::get('/', 'PostsController@index');
+
+Route::get('post/createForm','PostsController@createForm');
+
+Route::post('post/create','PostsController@create');
