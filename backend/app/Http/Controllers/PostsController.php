@@ -30,6 +30,7 @@ class PostsController extends Controller
             'post' => $post
         ]);
 
+
         return redirect('/');
     }
 }
