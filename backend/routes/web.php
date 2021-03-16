@@ -29,3 +29,7 @@ Route::get('/', 'PostsController@index');
 Route::get('post/createForm','PostsController@createForm');
 
 Route::post('post/create','PostsController@create');
+
+Route::get('post/{id}/update-form', "PostsController@updateForm");
+
+Route::get('post/{id}/delete', "PostsController@delete");

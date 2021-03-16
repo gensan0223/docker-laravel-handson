@@ -33,4 +33,21 @@ class PostsController extends Controller
 
         return redirect('/');
     }
+
+    public function updateForm($id)
+        {
+            $post = \DB::table('posts')
+                ->where('id',$id)
+                ->first();
+            return view('posts.updateForm', compact('post'));
+        }
+    
+    public function delete($id)
+        {
+            \DB::table('posts')
+                ->where('id', $id)
+                ->delete();
+
+            return redirect('/');
+        }
 }
