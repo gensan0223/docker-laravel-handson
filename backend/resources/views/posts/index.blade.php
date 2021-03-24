@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 @section('content')
 <div class='container'>
     <p class="pull-right"><a class="btn btn-success" href="post/createForm">投稿する</a></p>
