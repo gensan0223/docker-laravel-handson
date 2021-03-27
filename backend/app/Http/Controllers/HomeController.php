@@ -15,6 +15,7 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
+kkk
 
     /**
      * Show the application dashboard.
