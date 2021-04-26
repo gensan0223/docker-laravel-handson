@@ -33,20 +33,12 @@ Route::post('post/create','PostsController@create');
 Route::get('post/{id}/update-form', "PostsController@updateForm");
 
 Route::get('post/{id}/delete', "PostsController@delete");
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
+Auth::routes([
+   'register' => false; //ユーザ登録機能オフ
+]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/welcome', 'PostsController@welcome');
+
+Route::get('/added', 'Auth\RegisterController@create');
